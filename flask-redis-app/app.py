@@ -4,7 +4,6 @@ import os
 
 app = Flask(__name__)
 
-# Connect to Redis (service name = "redis")
 redis_host = os.environ.get("REDIS_HOST", "redis")
 r = redis.Redis(host=redis_host, port=6379)
 
