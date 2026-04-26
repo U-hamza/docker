@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Redis App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1> Flask + Redis App</h1>
+
+        <p>Welcome! This is a Dockerised Flask app.</p>
+
+        <a href="/count" class="btn">Increase Visit Count</a>
+
+        {% if visits %}
+            <div class="counter">
+                Visits: {{ visits }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
