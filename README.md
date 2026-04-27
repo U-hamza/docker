@@ -123,9 +123,11 @@ I followed the structure shown below to avoid errors from occuring later.
 
 
 ## Challenges 
-One of the biggest challenges I faced in this project was the folder arrangements. Many times throught this assignment I created directories in incorrect places as well files. This caused many problems with running my code, leading to errors in running on local host etc. 
+I faced several challenges, particularly with configuring Docker and ensuring the correct project structure. I initially struggled with file paths and build contexts, especially when the Docker Compose file was not in the expected location, which caused errors when running the application. Linking the HTML and CSS correctly in Flask also required careful attention to folder naming and file references. In addition, I encountered issues when pushing my work to GitHub, such as incorrect remote URLs and authentication problems. Overcoming these challenges helped me develop a better understanding of debugging, and containerisation.
 
-I finally realised that folder/file arrangements are fundamental to a smooth running code. 
+
+## What I learnt
+Through this project, I learned how to build and containerise a multi-service web application using Docker and Docker Compose. I developed a basic Flask application and integrated it with a Redis database to store and retrieve data, which helped me understand how different services communicate within a shared network. I also gained experience structuring a project correctly, linking HTML and CSS for a more user-friendly interface, and troubleshooting common issues related to file paths, containers, and configuration. Additionally, I improved my understanding of version control by managing changes and pushing my work to GitHub.
 
 
 
