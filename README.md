@@ -93,10 +93,10 @@ I followed the structure shown below to avoid errors from occuring later.
 
 
 ## 8. Use HTML and CSS to be creative (optional)
-- This is optional and in my case it was used because of previous web development background.
+- This is optional but effective to create a more user-friendly interface
 - Create a templates folder, and then create a file index.html.
-- Create a static folder, and then crease style.css
-- Use a similar structure to the one below. If the structure is in correct, flask will not be able to run it.
+- Create a static folder, and then crease a file style.css
+- Use a similar structure to the one below. If the structure is incorrect, flask will not be able to run it.
 
 
 <img width="245" height="260" alt="Screenshot 2026-04-27 at 19 59 18" src="https://github.com/user-attachments/assets/dc60a080-e252-43e8-b961-a6395b7ca548" />
