@@ -1,11 +1,11 @@
-## Docker Assignment
+# Docker Assignment
 
 
-# Objective 
+## Objective 
 To create a multi-container application that consists of a simple Python Flask web application and a Redis database. The Flask application must use Redis to store and retrieve data.
 
 
-# Requirements 
+## Requirements 
 Flask Web Application:
 
 - A Flask app that has two routes:
@@ -18,14 +18,14 @@ Flask Web Application:
   Use Docker Compose to manage the multi-container application.
 
 
-# 1. Project structure 
+## 1. Project structure 
 I followed the structure shown below to avoid errors from occuring later. 
 
 <img width="263" height="179" alt="Screenshot 2026-04-27 at 19 18 00" src="https://github.com/user-attachments/assets/a7b07030-8c32-4158-b727-d19cbbefc603" />
 
 <br/>
 
-# 2. Flask application code
+## 2. Flask application code
 - Within your app folder create the file: app.py
 - The following was coded with python and redis was used as its database.
 - Choose what port to run your code. In this case port 5001 was used.
@@ -38,7 +38,7 @@ I followed the structure shown below to avoid errors from occuring later.
 
 
 
-# 2. Create requirements.txt file
+## 2. Create requirements.txt file
 - Withing the app folder create a requirements.txt file and insert flask and redis.
 - This file is a must for managing Python dependencies.
   
@@ -48,7 +48,7 @@ I followed the structure shown below to avoid errors from occuring later.
 <br/>
 
 
-# 3. Create Flask Dockerfile
+## 3. Create Flask Dockerfile
 - The dockerfile was created with the following code:
 
 <img width="639" height="353" alt="Screenshot 2026-04-27 at 19 36 59" src="https://github.com/user-attachments/assets/66685e9b-dbe4-46d2-bc68-7d4feb15724e" />
@@ -56,12 +56,12 @@ I followed the structure shown below to avoid errors from occuring later.
 <br/>
 
 
-# 4. Redis Container
+## 4. Redis Container
 - Although the objective states make two dockerfiles, redis image can be used automatically from Dockerhub.
 - redis: 7 (this was used and inserted into the docker compose file which will be shown below)
 
 
-# 5. Create Docker Compose 
+## 5. Create Docker Compose 
 - Create the file outside the app folder but within the root project folder.
 - Create docker-compose.yml
 - The following code was used to create the file:
@@ -73,11 +73,11 @@ I followed the structure shown below to avoid errors from occuring later.
 
 
 
-# 6. Run the application
+## 6. Run the application
 - From the project root which in this case is flask-redis-app, run docker compose up  --build.
 - For further clarity go to the terminal: cd into project root and then run docker compose up --build.
 
-# 7. Test the application
+## 7. Test the application
 - Run the application on your local port and you should see the welcome message.
 - Click the visit button to ensure that it goes up with every click or page refresh.
 
@@ -92,7 +92,7 @@ I followed the structure shown below to avoid errors from occuring later.
 <br/>
 
 
-# 8. Use HTML and CSS to be creative (optional)
+## 8. Use HTML and CSS to be creative (optional)
 - This is optional and in my case it was used because of previous web development background.
 - Create a templates folder, and then create a file index.html.
 - Create a static folder, and then crease style.css
@@ -122,7 +122,7 @@ I followed the structure shown below to avoid errors from occuring later.
 
 
 
-# Challenges 
+## Challenges 
 One of the biggest challenges I faced in this project was the folder arrangements. Many times throught this assignment I created directories in incorrect places as well files. This caused many problems with running my code, leading to errors in running on local host etc. 
 
 I finally realised that folder/file arrangements are fundamental to a smooth running code. 
