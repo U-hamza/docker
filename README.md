@@ -21,15 +21,9 @@ Flask Web Application:
 # 1. Project structure 
 I followed the structure shown below to avoid errors from occuring later. 
 
-flask-redis-app/
-│
-├── app/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-│
-├── docker-compose.yml
+<img width="263" height="179" alt="Screenshot 2026-04-27 at 19 18 00" src="https://github.com/user-attachments/assets/a7b07030-8c32-4158-b727-d19cbbefc603" />
 
+<br/>
 
 # 2. Flask application code
 - Within your app folder create the file: app.py
@@ -37,27 +31,9 @@ flask-redis-app/
 - Choose what port to run your code. In this case port 5001 was used.
 
 
-from flask import Flask
-import redis
-import os
+<img width="765" height="635" alt="Screenshot 2026-04-27 at 19 55 36" src="https://github.com/user-attachments/assets/172f8d71-459a-4f9c-9a7c-9d8e45d8b06d" />
 
-app = Flask(__name__)
-
-
-redis_host = os.environ.get("REDIS_HOST", "redis")
-r = redis.Redis(host=redis_host, port=6379)
-
-@app.route("/")
-def home():
-    return "Welcome to the Flask + Redis App!"
-
-@app.route("/count")
-def count():
-    visits = r.incr("counter")
-    return f"Visit count: {visits}"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+<br/>
 
 
 
@@ -90,22 +66,10 @@ if __name__ == "__main__":
 - The following code was used to create the file:
 
 
-services:
-  web:
-    build: ./app
-    container_name: flask_app2
-    ports:
-      - "5001:5001"
-    depends_on:
-      - redis
-    environment:
-      - REDIS_HOST=redis
+<img width="635" height="590" alt="Screenshot 2026-04-27 at 19 56 21" src="https://github.com/user-attachments/assets/4d0c0405-50c6-4e69-9c6e-4f70ce4c2d69" />
 
-  redis:
-    image: redis:7
-    container_name: redis_db
-    ports:
-      - "6379:6379"
+<br/>
+
 
 
 # 6. Run the application
@@ -128,8 +92,25 @@ services:
 
 
 # 8. Use HTML and CSS to be creative (optional)
-- This is optional and in my case it was used because previous web development background.
-- 
+- This is optional and in my case it was used because of previous web development background.
+- Create a templates folder, and then create a file index.html
+- Create a static folder, and then crease style.css
+- Use a similar structure to the one below. If the structure is in correct, flask will not be able to run it.
+
+
+<img width="245" height="260" alt="Screenshot 2026-04-27 at 19 59 18" src="https://github.com/user-attachments/assets/dc60a080-e252-43e8-b961-a6395b7ca548" />
+
+<br/>
+
+- templates and statics folders names should be not be altered otherwise flask will not be able to detect the HTML and CSS files.
+- HTML file must have static name present in the href as shown below.
+
+<img width="883" height="54" alt="Screenshot 2026-04-27 at 20 02 51" src="https://github.com/user-attachments/assets/8e6328dc-1d01-4ed2-9ac9-a4f7674f3c0a" />
+
+<br/>
+
+- If you are familiar with HTML and CSS then customise as you wish. 
+
 
 
 
